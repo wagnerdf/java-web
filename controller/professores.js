@@ -14,7 +14,7 @@ professoresModulo.controller("professoresController", function ($scope){
   }
 
   $scope.limparCampos = function(){
-    $scope.professor = "";
+    $scope.professor = {};
   }
 
   $scope.salvar = function(){
