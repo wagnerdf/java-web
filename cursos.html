@@ -126,21 +126,19 @@
               </div>
               <div class="form-group">
                 <label for="diashorarios">Dias e Horários</label>
-
+                <div>
                   <input type="text" ng-model="curso.diashorarios" class="form-control" id="diashorarios" placeholder="Dias e Horários">
-
+                </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 control-label" for="professor">Professor</label>
+                <label class="col-sm-1 control-label" for="professor">Professor</label>
                   <div class="col-sm-4">
-                    <select class="form-control" ng-model="curso.professor" ng-options="professor.nome for professor in professores track by professor.codigo">
-
-                    </select>
+                    <select class="form-control" ng-model="curso.professor" ng-options="professor.nome for professor in professores track by professor.codigo"> </select>
                   </div>
               </div>
                 <div align="center" class="form-group">
                   <button type="submit" ng-click="limparCampos()" class="btn btn-success">Novo</button>
-                  <button type="submit" ng-click="salvar()" class="btn btn-primary">Gravar</button>
+                  <button ng-disabled="!curso.nome" type="submit" ng-click="salvar()" class="btn btn-primary">Gravar</button>
                   <button type="submit" ng-click="excluir()" class="btn btn-danger">Excluir</button>
 
                 </div>
